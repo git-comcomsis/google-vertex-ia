@@ -1,0 +1,55 @@
+{
+  "name": "8454e57f-8e9f-4d5b-a5fa-c71842fc6e45",
+  "actions": [ {
+    "userUtterance": {
+      "text": "Me podría enviar una solicitud de una cotización para página web"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Claro, ¿podrías proporcionarme tu nombre completo y correo electrónico para enviarte la cotización?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Juan Martinez whatsapp 5588999665"
+    }
+  }, {
+    "toolUse": {
+      "tool": "projects/boscotron-b9hy/locations/us-central1/agents/b469c191-5f2f-4c71-93a8-4d1fe47e1b97/tools/1bcc06fa-a9f1-40f0-b290-dc88a490f15e",
+      "action": "crearContacto",
+      "inputActionParameters": {
+        "requestBody": {
+          "fn": "new_contact",
+          "name": "Juan Martinez",
+          "phone": [ {
+            "number": "5588999665",
+            "type": "whatsapp"
+          } ],
+          "types": [ "Prospecto" ]
+        }
+      },
+      "outputActionParameters": {
+        "200": {
+          "fulfillment_response": {
+            "messages": [ {
+              "text": {
+                "text": "Contacto agregado al directorio correctamente."
+              }
+            } ]
+          },
+          "result": {
+            "message": "Contacto agregado al directorio correctamente.",
+            "status": "ok"
+          }
+        }
+      }
+    }
+  }, {
+    "agentUtterance": {
+      "text": "¡Perfecto! He creado un nuevo contacto para Juan Martinez con el número de WhatsApp 5588999665. En breve recibirás una cotización en tu WhatsApp. ¿Hay algo más en lo que pueda ayudarte hoy?"
+    }
+  } ],
+  "displayName": "Solicitud de cotización",
+  "retrievalStrategy": "DEFAULT",
+  "conversationState": "OUTPUT_STATE_PENDING",
+  "languageCode": "es"
+}

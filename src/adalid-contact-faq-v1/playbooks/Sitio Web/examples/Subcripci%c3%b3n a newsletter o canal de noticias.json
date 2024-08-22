@@ -1,0 +1,55 @@
+{
+  "name": "cc84a0bd-de28-4e9d-87d1-fb03610c7c09",
+  "actions": [ {
+    "userUtterance": {
+      "text": "Quiero subscribirme al canla de noticias"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "¡Claro! ¿Podrías proporcionarme tu nombre completo y correo electrónico para agregarte a nuestra lista de suscriptores?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Roberto Aldama alberto@lol.com"
+    }
+  }, {
+    "toolUse": {
+      "tool": "projects/boscotron-b9hy/locations/us-central1/agents/b469c191-5f2f-4c71-93a8-4d1fe47e1b97/tools/1bcc06fa-a9f1-40f0-b290-dc88a490f15e",
+      "action": "crearContacto",
+      "inputActionParameters": {
+        "requestBody": {
+          "email": [ {
+            "email": "alberto@lol.com",
+            "type": "email"
+          } ],
+          "fn": "new_contact",
+          "name": "Roberto Aldama",
+          "types": [ "Suscriptor" ]
+        }
+      },
+      "outputActionParameters": {
+        "200": {
+          "fulfillment_response": {
+            "messages": [ {
+              "text": {
+                "text": "Contacto agregado al directorio correctamente."
+              }
+            } ]
+          },
+          "result": {
+            "message": "Contacto agregado al directorio correctamente.",
+            "status": "ok"
+          }
+        }
+      }
+    }
+  }, {
+    "agentUtterance": {
+      "text": "¡Excelente! Te has suscrito exitosamente a nuestro canal de noticias. Recibirás actualizaciones y ofertas exclusivas en tu correo electrónico. ¿Hay algo más en lo que pueda ayudarte hoy?"
+    }
+  } ],
+  "displayName": "Subcripción a newsletter o canal de noticias",
+  "retrievalStrategy": "DEFAULT",
+  "conversationState": "OUTPUT_STATE_PENDING",
+  "languageCode": "es"
+}

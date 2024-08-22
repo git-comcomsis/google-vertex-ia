@@ -1,0 +1,19 @@
+{
+    "name": "895e48de-1223-4f83-9977-6eac83fb6bb9",
+    "displayName": "FAQ-CONTACTO",
+    "description": "La base de datos proporciona una lista de preguntas frecuentes",
+    "openApiSpec": {
+        "authentication": {
+            "apiKeyConfig": {
+                "keyName": "token-access",
+                "apiKey": "TOKENACCESS",
+                "requestLocation": "HEADER"
+            }
+        }
+    },
+    "sharedSchemas": [{
+        "name": "FAQ",
+        "schema": "{\n  \"required\" : [ \"id\", \"question\", \"reply\", \"url\" ],\n  \"type\" : \"object\",\n  \"properties\" : {\n    \"id\" : {\n      \"type\" : \"string\"\n    },\n    \"question\" : {\n      \"type\" : \"string\"\n    },\n    \"reply\" : {\n      \"type\" : \"string\"\n    },\n    \"url\" : {\n      \"type\" : \"string\"\n    }\n  }\n}"
+    }],
+    "toolType": "CUSTOMIZED_TOOL"
+}

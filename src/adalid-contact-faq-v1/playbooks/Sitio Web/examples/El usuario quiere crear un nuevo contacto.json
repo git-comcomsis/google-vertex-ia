@@ -1,0 +1,67 @@
+{
+  "name": "f6c3db7c-4795-4baf-97fe-1677cd630c96",
+  "actions": [ {
+    "userUtterance": {
+      "text": "Hola, me gustaría recibir información"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "¡Hola! Claro que sí, con gusto te ayudo a agregar un nuevo contacto. ¿Podrías proporcionarme su nombre completo, por favor?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "María López."
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Excelente! ¿Tienes su correo electrónico, número de teléfono y/o whatsapp?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Sí, mi correo es maria.lopez@ejemplo.com y su whatsapp es 555-123-4567."
+    }
+  }, {
+    "toolUse": {
+      "tool": "projects/boscotron-b9hy/locations/us-central1/agents/b469c191-5f2f-4c71-93a8-4d1fe47e1b97/tools/1bcc06fa-a9f1-40f0-b290-dc88a490f15e",
+      "action": "crearContacto",
+      "inputActionParameters": {
+        "requestBody": {
+          "email": [ {
+            "email": "maria.lopez@ejemplo.com",
+            "type": "email"
+          } ],
+          "fn": "new_contact",
+          "name": "María López",
+          "phone": [ {
+            "number": "555-123-4567",
+            "type": "whatsapp"
+          } ],
+          "types": [ "Prospecto" ]
+        }
+      },
+      "outputActionParameters": {
+        "200": {
+          "fulfillment_response": {
+            "messages": [ {
+              "text": {
+                "text": "Contacto agregado al directorio correctamente."
+              }
+            } ]
+          },
+          "result": {
+            "message": "Contacto agregado al directorio correctamente.",
+            "status": "ok"
+          }
+        }
+      }
+    }
+  }, {
+    "agentUtterance": {
+      "text": "¡Perfecto! He creado un nuevo contacto para María López con el correo electrónico maria.lopez@ejemplo.com y el número de WhatsApp 555-123-4567. ¿Hay algo más en lo que pueda ayudarte hoy?"
+    }
+  } ],
+  "displayName": "El usuario quiere crear un nuevo contacto",
+  "retrievalStrategy": "DEFAULT",
+  "conversationState": "OUTPUT_STATE_PENDING",
+  "languageCode": "es"
+}

@@ -1,0 +1,56 @@
+{
+  "name": "357a9fcf-7125-45aa-b5cc-825662a3d978",
+  "actions": [ {
+    "userUtterance": {
+      "text": "Información de contacto"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "¡Hola! ¿Qué tipo de información de contacto estás buscando?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "cual es su web?"
+    }
+  }, {
+    "toolUse": {
+      "tool": "projects/boscotron-b9hy/locations/us-central1/agents/b469c191-5f2f-4c71-93a8-4d1fe47e1b97/tools/895e48de-1223-4f83-9977-6eac83fb6bb9",
+      "action": "listFAQs",
+      "outputActionParameters": {
+        "200": {
+          "faqs": [ {
+            "id": "8c6acebf-f5b4-47fe-b950-362a00ebcc7a",
+            "question": "¿Cúal es su contacto?",
+            "reply": "Nuestro teléfono es 5555 55 55 y nuesntro whasapp es +52 1 666 666 6666.\n\nEl correo de contacot es contacto@gmail.com",
+            "url": "https://www.comsis.mx/"
+          }, {
+            "id": "272711fd-5414-421e-bd0d-f8659315972e",
+            "question": "¿donde se ubican? o ¿Cómo llego?",
+            "reply": "Vemay Masajes Reductivos y Relajantes\nCalle 36, Nº exterior: 305 entre 111 y 109a, Francisco Villa Poniente, 97219 Mérida, Yuc.\n\nUbicación o link maps:\nhttps://maps.app.goo.gl/K2t8Fhfy6NuDCCgz5",
+            "url": "https://maps.app.goo.gl/K2t8Fhfy6NuDCCgz5"
+          }, {
+            "id": "fbf21258-f77a-4a75-ba26-f8a5ab65a34c",
+            "question": "¿que incluye el paquete? ¿que promociones hay?",
+            "reply": "Promociones de Septiembre  para mespatrio 15%\n\nPromociones de Octubre y Noveimbre 20% \n\nPromociones de Diciembre 10% ",
+            "url": null
+          } ],
+          "fulfillment_response": {
+            "messages": [ {
+              "text": {
+                "text": [ "¿Cúal es su contacto?", "¿donde se ubican? o ¿Cómo llego?", "¿que incluye el paquete? ¿que promociones hay?" ]
+              }
+            } ]
+          }
+        }
+      }
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Nuestra página web es https://www.comsis.mx/, ¿hay algo más en lo que pueda ayudarte?"
+    }
+  } ],
+  "displayName": "Información de contacto",
+  "retrievalStrategy": "DEFAULT",
+  "conversationState": "OUTPUT_STATE_PENDING",
+  "languageCode": "undetected"
+}

@@ -1,0 +1,55 @@
+{
+  "name": "a44ae4f0-f357-4803-a8cb-fa0cb2c2a401",
+  "actions": [ {
+    "userUtterance": {
+      "text": "me puedes enviar más información sobre Desarrollo web?"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Claro, ¿pudes darme tu nombre completo y algún tu correo o whatsapp para enviarte más información?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Claro, Me llamo Roberto Carlos 5588996633"
+    }
+  }, {
+    "toolUse": {
+      "tool": "projects/boscotron-b9hy/locations/us-central1/agents/b469c191-5f2f-4c71-93a8-4d1fe47e1b97/tools/1bcc06fa-a9f1-40f0-b290-dc88a490f15e",
+      "action": "crearContacto",
+      "inputActionParameters": {
+        "requestBody": {
+          "fn": "new_contact",
+          "name": "Roberto Carlos",
+          "phone": [ {
+            "number": "5588996633",
+            "type": "whatsapp"
+          } ],
+          "types": [ "Prospecto" ]
+        }
+      },
+      "outputActionParameters": {
+        "200": {
+          "fulfillment_response": {
+            "messages": [ {
+              "text": {
+                "text": "Contacto agregado al directorio correctamente."
+              }
+            } ]
+          },
+          "result": {
+            "message": "Contacto agregado al directorio correctamente.",
+            "status": "ok"
+          }
+        }
+      }
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Muchas gracias, tu contacto se agregado al directorio correctamente, pronto recibirás más información."
+    }
+  } ],
+  "displayName": "Solicitud de información ",
+  "retrievalStrategy": "DEFAULT",
+  "conversationState": "OUTPUT_STATE_PENDING",
+  "languageCode": "undetected"
+}

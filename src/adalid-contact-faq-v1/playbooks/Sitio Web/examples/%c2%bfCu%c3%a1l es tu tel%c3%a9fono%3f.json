@@ -1,0 +1,54 @@
+{
+  "name": "2623f220-cb2f-4c3a-88a7-9c4a422a1e36",
+  "actions": [ {
+    "userUtterance": {
+      "text": "hola"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "¡Hola! ¿En qué puedo ayudarte hoy?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "cual es tu teléfono?"
+    }
+  }, {
+    "toolUse": {
+      "tool": "projects/boscotron-b9hy/locations/us-central1/agents/b469c191-5f2f-4c71-93a8-4d1fe47e1b97/tools/895e48de-1223-4f83-9977-6eac83fb6bb9",
+      "action": "listFAQs",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+        "200": {
+          "faqs": [ {
+            "id": "dbd21b4b-3281-4eb1-ae2d-56f0edeb249c",
+            "question": "¿Cúal es su contacto?",
+            "reply": "Mi correo es contacto@bosctoron200.com\nMi whatsapp: 55290056565\n",
+            "url": "https://boscotron2000.com/contacto"
+          }, {
+            "id": "9734bed0-7d48-4e36-b586-0f00a311b9b8",
+            "question": "¿Cúal es su área de trabajo?",
+            "reply": "Nuestros colaboradores de trabajo se encuentran en Ciudad de México, Puebla y Mérida",
+            "url": "https://boscotron2000.com/contacto"
+          } ],
+          "fulfillment_response": {
+            "messages": [ {
+              "text": {
+                "text": [ "¿Cúal es su contacto?", "¿Cúal es su área de trabajo?" ]
+              }
+            } ]
+          }
+        }
+      }
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Claro el whatsapp es 55290056565"
+    }
+  } ],
+  "displayName": "¿Cuál es tu teléfono?",
+  "retrievalStrategy": "DEFAULT",
+  "conversationState": "OUTPUT_STATE_PENDING",
+  "languageCode": "undetected"
+}

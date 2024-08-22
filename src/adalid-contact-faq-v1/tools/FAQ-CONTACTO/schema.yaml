@@ -1,0 +1,114 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Simple FAQs API",
+        "version": "1.0.0",
+        "description": "This is the OpenAPI specification of a sample F.A.Q. Service."
+    },
+    "servers": [
+        {
+            "url": "https://adalidbeta.comsis.space/webhook/think-and-share/faq/"
+        }
+    ],
+    "paths": {
+        "/": {
+            "get": {
+                "summary": "List all faqs",
+                "operationId": "listFAQs",
+                "responses": {
+                    "200": {
+                        "description": "Return array of FAQs",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "fulfillment_response": {
+                                            "type": "object",
+                                            "properties": {
+                                                "messages": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "text": {
+                                                                "type": "object",
+                                                                "properties": {
+                                                                    "text": {
+                                                                        "type": "array",
+                                                                        "items": {
+                                                                            "type": "string"
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "faqs": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/FAQ"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/{faqId}": {
+            "get": {
+                "summary": "Return information of FAQ by ID.",
+                "operationId": "getFAQ",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "faqId",
+                        "required": true,
+                        "description": "FAQ id",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "FAQ": {
+                "type": "object",
+                "required": [
+                    "id",
+                    "question",
+                    "reply",
+                    "url"
+                ],
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "question": {
+                        "type": "string"
+                    },
+                    "reply": {
+                        "type": "string"
+                    },
+                    "url": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}

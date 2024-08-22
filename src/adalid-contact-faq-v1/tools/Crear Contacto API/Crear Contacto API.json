@@ -1,0 +1,15 @@
+{
+    "name": "1bcc06fa-a9f1-40f0-b290-dc88a490f15e",
+    "displayName": "Crear Contacto API",
+    "description": "Esta API permite crear un nuevo contacto en el directorio",
+    "openApiSpec": {
+        "authentication": {
+            "apiKeyConfig": {
+                "keyName": "token-access",
+                "apiKey": "TOKENACCESS",
+                "requestLocation": "HEADER"
+            }
+        }
+    },
+    "toolType": "CUSTOMIZED_TOOL"
+}

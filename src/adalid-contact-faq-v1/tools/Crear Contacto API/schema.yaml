@@ -1,0 +1,97 @@
+openapi: 3.0.0
+info:
+  title: Crear Contacto API
+  version: 1.0.0
+  description: Esta API permite crear un nuevo contacto en el directorio.
+servers:
+  - url: 'https://adalid-beta.boscotron2000.com/api/v1/directory/1723542416592'
+paths:
+  /:
+    post:
+      summary: Crear un nuevo contacto
+      operationId: crearContacto
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                fn:
+                  type: string
+                  enum:
+                    - new_contact
+                  description: >-
+                    Función a ejecutar: 'new_contact' para crear un nuevo
+                    contacto
+                types:
+                  type: array
+                  items:
+                    type: string
+                  description: 'Tipos de contacto (ej. ''Cliente'', ''Noticias'')'
+                name:
+                  type: string
+                  description: Nombre completo del contacto
+                email:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      email:
+                        type: string
+                        format: email
+                        description: Dirección de correo electrónico
+                      type:
+                        type: string
+                        enum:
+                          - email
+                          - personal
+                          - office
+                        description: Tipo de correo electrónico
+                  description: Lista de correos electrónicos del contacto
+                phone:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      number:
+                        type: string
+                        description: Número de teléfono
+                      type:
+                        type: string
+                        enum:
+                          - whatsapp
+                          - phone
+                          - office
+                        description: Tipo de número de teléfono
+                  description: Lista de números de teléfono del contacto
+      responses:
+        '200':
+          description: Respuesta exitosa
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  result:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+                      status:
+                        type: string
+                  fulfillment_response:
+                    type: object
+                    properties:
+                      messages:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            text:
+                              type: object
+                              properties:
+                                text:
+                                  type: array
+                                  items:
+                                    type: string
